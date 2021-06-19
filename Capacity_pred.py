@@ -34,7 +34,7 @@ x_train = x_train.reshape(-1, 1) #changes from 1 d array to 2 d array
 y_train = y_train.reshape(-1, 1)
 
 #Fitting model
-regressor = SVR(C=20, epsilon=0.0001, gamma=0.00001, cache_size=200,kernel='rbf', max_iter=-1, shrinking=True, tol=0.001, verbose=False)
+regressor = SVR(epsilon=0.0001,kernel='rbf')
 regressor.fit(x_train,y_train)
 
 #Predicting data
